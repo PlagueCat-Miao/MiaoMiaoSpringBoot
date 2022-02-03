@@ -1,10 +1,10 @@
-package com.example.demo.smm;
+package com.plague.learn;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootMysqlMybatisDemoApplicationTests {
+class LearnApplicationTests {
 
     @Test
     void contextLoads() {
