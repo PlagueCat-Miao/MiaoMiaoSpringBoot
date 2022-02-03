@@ -4,6 +4,7 @@
 ## quick-start
 
 1. 点击`Code`,下载本项目..喵.....
+   - 注意`git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git`
 
 2. 启动本地Mysql，进入自己任一数据库执行一下sql文件建表
 
