@@ -25,7 +25,7 @@ public class MakeTrainData {
     private static Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
 
     @RequestMapping("/makeTrain")
-    public String makeTrain(@RequestParam("workPath") String workPath) {
+    public String makeTrain() {
         //获取文件夹下文件
         List<Path> javaFileNames = null;
         try (Stream<Path> paths = Files.walk(Paths.get(workPath))) {
