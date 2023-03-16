@@ -23,7 +23,10 @@ public class MakeTrainData {
      * 获取Gson
      */
     private static Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
-
+    /**
+     * java项目目标路径
+     */
+    private static String workPath = "D:\\codeworkbase\\Java\\MiaoMiaoSpringBoot\\src\\main\\java\\com\\plague\\learn";
     @RequestMapping("/makeTrain")
     public String makeTrain() {
         //获取文件夹下文件
@@ -42,7 +45,7 @@ public class MakeTrainData {
         }
 
         //训练文件路径
-        String trainDataFile = workPath + "train.json";
+        String trainDataFile = workPath + "target/train.json";
         for (Path path : javaFileNames) {
             String text = FileRead(path);
             LinkedHashMap trainDataMap = new LinkedHashMap<>();

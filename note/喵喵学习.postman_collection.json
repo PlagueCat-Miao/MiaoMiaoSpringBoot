@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "5a03b74d-9082-4df6-baa3-17fec4ec4c8f",
+		"name": "喵喵学习",
+		"description": "第一次尝试",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "springboot学习",
+			"item": [
+				{
+					"name": "T00_HelloSpringboot",
+					"item": [
+						{
+							"name": "hellword",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/hello",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"hello"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/login?username=rootmiao&password=12345678",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "rootmiao"
+										},
+										{
+											"key": "password",
+											"value": "12345678"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "静态类 VS 组件bean-StaticAndComponent",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/StaticAndComponent",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"StaticAndComponent"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "T02_Gson",
+					"item": [
+						{
+							"name": "UseGson",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/UseGson",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"UseGson"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GoFastJson",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/GoFastJson",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"GoFastJson"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GoGson Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/GoGson",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"GoGson"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "T03_MakeTrainJsonData",
+					"item": [
+						{
+							"name": "makeTrain",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/makeTrain",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"makeTrain"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "T05_ConfigurationPropertiesMerge",
+					"item": [
+						{
+							"name": "ShowConf",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8066/ShowConf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8066",
+									"path": [
+										"ShowConf"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "T04",
+					"item": []
+				}
+			]
+		},
+		{
+			"name": "js小光修复",
+			"item": [
+				{
+					"name": "尝试修复小光天气",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://www.weather.com.cn/data/sk/101010100.html?1720879894",
+							"protocol": "http",
+							"host": [
+								"www",
+								"weather",
+								"com",
+								"cn"
+							],
+							"path": [
+								"data",
+								"sk",
+								"101010100.html"
+							],
+							"query": [
+								{
+									"key": "1720879894",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "尝试修复小光天气 Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://wthrcdn.etouch.cn/weather_mini?citykey=101010100",
+							"protocol": "http",
+							"host": [
+								"wthrcdn",
+								"etouch",
+								"cn"
+							],
+							"path": [
+								"weather_mini"
+							],
+							"query": [
+								{
+									"key": "citykey",
+									"value": "101010100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "json测试",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\" : \"hellcat\",\r\n  \"password\" : \"12345678\",\r\n  \"targetdb\" : \"cloud\",\r\n  \"Dhash\" : \"QmABCD\",\r\n  \"status\" : \"3\",\r\n  \"ip\" : \"127.0.0.1\",\r\n  \"capacity\" : \"400\",\r\n  \"remain\" : \"300\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "localhost:8080/do/test1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"do",
+						"test1"
+					]
+				},
+				"description": "json测试"
+			},
+			"response": []
+		},
+		{
+			"name": "get-kv测试",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "hell",
+						"value": "cat",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/user/miaomiao/?param=alice&hello=cat",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"miaomiao",
+						""
+					],
+					"query": [
+						{
+							"key": "param",
+							"value": "alice"
+						},
+						{
+							"key": "hello",
+							"value": "cat"
+						}
+					]
+				},
+				"description": "测试一下什么是keys"
+			},
+			"response": []
+		}
+	]
+}

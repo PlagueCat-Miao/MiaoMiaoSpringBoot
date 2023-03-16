@@ -1,7 +1,14 @@
-# JavaSpringBoot-MySqlDemo
+# 
+喵喵超级小白喵，尝试继续学习springboot,(然而配置都配不好QAQ)
+
+### 1.通用
+
+
+
+### 2. 连接数据库
 喵喵尝试配置了SpringBoot并连接自己本地的MySql，尝试学习的朋友一定要记得改好application.properties
 
-## quick-start
+#### quick-start
 
 1. 点击`Code`,下载本项目..喵.....
    - 注意`git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git`
@@ -46,11 +53,11 @@
    ```
 6. 完成喵，自己可以根据需要进行魔改喵 
 
-## 可能的问题
+#### 可能的问题
 
 - 如果报错 Public Key Retrieval is not allowed，要在application.properties文件中的spring.datasource.url的内容后添加`&allowPublicKeyRetrieval=true`
 
-## 参考
+#### 参考
 
 - Springboot整合mysql和mybatis步骤  
   文章地址：https://blog.csdn.net/weixin_43841693/article/details/102921770
