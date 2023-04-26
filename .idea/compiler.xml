@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-mysql-mybatis-demo" />
+        <module name="Learn" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Learn" target="1.8" />
       <module name="springboot-mysql-mybatis-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>

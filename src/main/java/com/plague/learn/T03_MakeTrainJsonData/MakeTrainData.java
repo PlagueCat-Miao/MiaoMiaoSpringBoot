@@ -24,12 +24,11 @@ public class MakeTrainData {
      */
     private static Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
     /**
-     * java项目目标路径
+     * 将Java项目的代码 代码转入json
      */
     private static String workPath = "D:\\codeworkbase\\Java\\MiaoMiaoSpringBoot\\src\\main\\java\\com\\plague\\learn";
     @RequestMapping("/makeTrain")
     public String makeTrain() {
-        //获取文件夹下文件
         List<Path> javaFileNames = null;
         try (Stream<Path> paths = Files.walk(Paths.get(workPath))) {
             List<Path> fileNames = paths
