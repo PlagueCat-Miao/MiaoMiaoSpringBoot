@@ -1,0 +1,47 @@
+package com.plague.learn.T04_ParseDiffFile;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+
+/**
+ * 测试Gson
+ */
+@RestController
+public class UseGson2 {
+
+    /**
+     * 获取Gson
+     */
+    private static Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
+
+    /**
+     * 测试Gson处理LinkedHashMap
+     * @return
+     */
+    @RequestMapping("/UseGson")
+    public String useGson() {
+        //创建测试map
+        LinkedHashMap<String,Object> hashMap = new LinkedHashMap<>();
+        hashMap.put("1",1);hashMap.put("A","a");
+        //json序列化
+        String str = gson.toJson(hashMap);
+        System.out.println(str);
+        LinkedHashMap<String,Object> obj = gson.fromJson(str,LinkedHashMap.class);
+        obj.put("1",2);
+        //json反序列化
+        ArrayList<Integer> objArray = new ObjectMapper().convertValue(obj.get("arrays"), ArrayList.class);
+        //输出预处理
+        objArray.set(0,Object.fliter(4)) ;
+        KeyWordFliter k = new KeyWordFliter();
+        KeyWordFliter.fliter(objArray);
+        obj.put("arrays",objArray);
+        //页面返回
+        return gson.toJson(obj);
+    }
+}
