@@ -29,11 +29,12 @@ public class UseGson2 {
         //创建测试map
         LinkedHashMap<String,Object> hashMap = new LinkedHashMap<>();
         hashMap.put("1",1);hashMap.put("A","a");
-        //终端打印
+        //终端打印（参与删除a）
         System.out.println(gson.toJson(hashMap));
         ArrayList<String> arrays = new ArrayList();
         arrays.add("!");arrays.add("@");arrays.add("#");arrays.add("$");
         hashMap.put("arrays",arrays);
+        //（删除结束a）
         //json序列化
         String str = gson.toJson(hashMap);
         System.out.println(str);
@@ -41,7 +42,8 @@ public class UseGson2 {
         obj.put("1",2);
         //json反序列化
         ArrayList<Integer> objArray = new ObjectMapper().convertValue(obj.get("arrays"), ArrayList.class);
-        objArray.set(0,4) ;
+        //输出预处理（参与修改a）
+        objArray.set(0,4) ;   //（修改结束a）
         obj.put("arrays",objArray);
         //页面返回
         return gson.toJson(obj);

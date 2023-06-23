@@ -36,12 +36,17 @@ public class UseGson2 {
         obj.put("1",2);
         //json反序列化
         ArrayList<Integer> objArray = new ObjectMapper().convertValue(obj.get("arrays"), ArrayList.class);
-        //输出预处理
+        //输出预处理（参与修改A）
         objArray.set(0,Object.fliter(4)) ;
         KeyWordFliter k = new KeyWordFliter();
-        KeyWordFliter.fliter(objArray);
+        KeyWordFliter.fliter(objArray);//（修改结束A）
         obj.put("arrays",objArray);
         //页面返回
         return gson.toJson(obj);
     }
+
+    //（参与新增A）
+    public String useGson2() {
+        return "";
+    } //（新增结束A）
 }

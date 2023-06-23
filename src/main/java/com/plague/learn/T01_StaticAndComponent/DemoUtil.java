@@ -12,7 +12,7 @@ public class DemoUtil {
      * 静态 Autowired 成员
      */
     @Autowired
-    static OtherUtil otherUtil;
+    public OtherUtil otherUtil;
 
     /**
      * 静态 String 成员
@@ -22,7 +22,7 @@ public class DemoUtil {
     /**
      * 静态访问方法
      */
-    public static String show() {
+    public  String show() {
 
         return "OtherUtil" + otherUtil.getGson().toJson(new DemoVO());
     }
