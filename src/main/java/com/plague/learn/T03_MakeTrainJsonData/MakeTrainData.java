@@ -26,7 +26,7 @@ public class MakeTrainData {
     /**
      * 将Java项目的代码 代码转入json
      */
-    private static String workPath = "D:\\codeworkbase\\Java\\MiaoMiaoSpringBoot\\src\\main\\java\\com\\plague\\learn";
+    private static String workPath = "src\\main\\java\\com\\plague\\learn";
     @RequestMapping("/makeTrain")
     public String makeTrain() {
         List<Path> javaFileNames = null;
