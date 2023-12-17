@@ -64,11 +64,9 @@ public class ParseDiffFile {
         });
 
 
-
-
         System.out.println("喵喵+-diff:");
         List<String> unifiedDiff = UnifiedDiffUtils.generateUnifiedDiff("原文件.txt", "对比修改后文件.txt", orgLines, patch, 0);
-        for (String diff :unifiedDiff) {
+        for (String diff : unifiedDiff) {
             System.out.println(diff);
         }
 
@@ -90,5 +88,17 @@ public class ParseDiffFile {
         }
     }
 
+    /**
+     * {@link com.plague.learn.T04_ParseDiffFile.ParseDiffFile#FileRead(String,int)}
+     */
+    private List<String> FileRead(String pathStr, int maxLen) {
+        Path path = Paths.get(pathStr);
+        try {
+            List<String> lines = Files.readAllLines(path);
+            return lines.subList(0, maxLen);
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
 }
