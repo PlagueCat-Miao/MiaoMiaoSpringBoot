@@ -22,8 +22,8 @@ public class ParseDiffFile {
      * java项目目标路径
      */
 
-    private static String originalFilePath = "F:\\codeworkbase\\java\\github.com\\PlagueCat-Miao\\MiaoMiaoSpringBoot\\src\\main\\java\\com\\plague\\learn\\T04_ParseDiffFile\\testo.txt";
-    private static String revisedFilePath = "F:\\codeworkbase\\java\\github.com\\PlagueCat-Miao\\MiaoMiaoSpringBoot\\src\\main\\java\\com\\plague\\learn\\T04_ParseDiffFile\\testr.txt";
+    private static String originalFilePath = "src\\main\\java\\com\\plague\\learn\\T04_ParseDiffFile\\testo.txt";
+    private static String revisedFilePath = "src\\main\\java\\com\\plague\\learn\\T04_ParseDiffFile\\testr.txt";
 
     @RequestMapping("/parseDiff")
     public String makeTrain() {
